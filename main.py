@@ -1,4 +1,4 @@
-raise RuntimeError
+#raise RuntimeError
 import discord
 from discord.ext import commands
 
