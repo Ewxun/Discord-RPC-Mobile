@@ -1,0 +1,35 @@
+---
+token: EwxunT # Your user token
+application_id: 855033225864806430 # Specify if you need to use art assets/images
+
+game: Solaria MC
+details: "IP: solariamc.net" 
+state: "Online Players: "
+
+party: # Options below
+  enable_party: True
+
+  party_max_size: 10
+  party_current_size: 4
+
+  minecraft: # Diaplays the server player count as party. (Updates every 20s)
+    enable_detection: True  # This will override the normal party
+
+    server_ip: server.solariamc.net
+    server_port: 19132
+
+elapsed_time: # Options below
+  enable_elapsed_time: True
+
+  mode: custom_start # Choice: normal, countdown, custom_start (case insensitive)
+  start_time: 1639120800 # Used if mode = custom_start (Unix Timestamp Format)
+  end_time: 1234 # Used if mode = countdown (Unix Timestamp Format)
+
+images: # Options below
+  enable_images: True
+  
+  #Leave any field blank if not needed
+  large_image_key: solaria
+  small_image_key: mcicon
+  large_image_text: Solaria MC
+  small_image_text: Minecraft 1.17.1
