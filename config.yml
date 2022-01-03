@@ -1,27 +1,30 @@
 ---
-token: EwxunT # Your user token
-application_id: 855033225864806430 # Specify if you need to use art assets/images
+replit: True  # Whether if you're using Replit
+auto_install_packages: True  # Stated (using 'pip install <package>')
 
-game: Solaria MC
-details: "IP: solariamc.net" 
-state: "Online Players: "
+auth_token: EwxunT  # Replit users leave blank but put token in the secrets tab and name the key "TOKEN"
+application_id: 855033225864806430  
 
-party: # Options below
-  enable_party: True
+game: Visual Studio Code  
+details: Editing detection.class
+state: In Anti-AFK-Bypass
+
+party: 
+  enable_party: False
 
   party_max_size: 10
   party_current_size: 4
 
-  minecraft: # Diaplays the server player count as party. (Updates every 20s)
-    enable_detection: True  # This will override the normal party
+  minecraft: # Displays the server player count as party. (Updates every 15s)
+    enable_detection: False  # This will override the party
 
     server_ip: server.solariamc.net
     server_port: 19132
 
-elapsed_time: # Options below
+elapsed_time: 
   enable_elapsed_time: True
 
-  mode: custom_start # Choice: normal, countdown, custom_start (case insensitive)
+  mode: normal # Choice: normal, countdown, custom_start (case insensitive)
   start_time: 1639120800 # Used if mode = custom_start (Unix Timestamp Format)
   end_time: 1234 # Used if mode = countdown (Unix Timestamp Format)
 
@@ -29,7 +32,7 @@ images: # Options below
   enable_images: True
   
   #Leave any field blank if not needed
-  large_image_key: solaria
-  small_image_key: mcicon
-  large_image_text: Solaria MC
-  small_image_text: Minecraft 1.17.1
+  large_image_key: java
+  small_image_key: vscode
+  large_image_text: Java
+  small_image_text: Visual Studio Code

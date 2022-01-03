@@ -1,24 +1,22 @@
-#raise RuntimeError
-import discord
-from discord.ext import commands
-
-import asyncio
 import os
 import time
+import asyncio
+
+import discord
+from discord.ext import commands
 import yaml
-
-from ext.bot_stat import keep_on
-from ext.imgid import get_img_id
-from ext.mcstat import mcstats
-
 
 with open("config.yml","r") as file:
   config = yaml.full_load(file.read())
 
-if config["token"] == "EwxunT":
-  token = os.environ.get("EwxunT")
+from ext.imgid import get_img_id
+from ext.mcstat import mcstats
+if config["replit"]:
+  from ext.bot_stat import keep_on
+  token = os.environ.get("TOKEN")
 else:
   token = config["token"]
+
 
 # Initialization
 appid = config["application_id"]
@@ -125,6 +123,6 @@ async def on_ready():
 async def on_disconnect():
   print("Rich Presence Stopped")
 
-
-keep_on()
+if config["replit"]:
+  keep_on()
 bot.run(token,bot = False)
