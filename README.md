@@ -112,6 +112,7 @@ https://github.com/Ewxun/Discord-RPC` into the `GitHub URL` field then click on 
 |Friendly Name|<any name you like\>|
 |URL (or IP)|https://<your replit project's name>.<your replit username\>.repl.co<br/>(you can also get the url by setting `replit` to `True` and running the repl once then go to the `Web` tab)|
 |Monitoring Interval and Monitoring Timeout|Leave it as it is.|
+
 then click `Create Monitor`.
 
 8. Go back to your repl and modify the config to your needs and you are good to go. (Remember to set `replit` to `True` and do not put your token in [config.yml](config.yml) as people can steal it and log into your Discord account)
