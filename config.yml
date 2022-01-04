@@ -1,13 +1,12 @@
 ---
 replit: True  # Whether if you're using Replit
-auto_install_packages: True  # Stated (using 'pip install <package>')
 
 auth_token: EwxunT  # Replit users leave blank but put token in the secrets tab and name the key "TOKEN"
 application_id: 855033225864806430  
 
 game: Visual Studio Code  
-details: Editing detection.class
-state: In Anti-AFK-Bypass
+details: Editing README.md
+state: In Discord-RPC
 
 party: 
   enable_party: False
@@ -24,15 +23,15 @@ party:
 elapsed_time: 
   enable_elapsed_time: True
 
-  mode: normal # Choice: normal, countdown, custom_start (case insensitive)
-  start_time: 1639120800 # Used if mode = custom_start (Unix Timestamp Format)
-  end_time: 1234 # Used if mode = countdown (Unix Timestamp Format)
+  mode: custom_start # Choice: normal, countdown, custom_start (case insensitive)
+  start_time: 1641279638 # Used if mode = custom_start (Unix Timestamp Format)
+  end_time: 1641274963 # Used if mode = countdown (Unix Timestamp Format)
 
 images: # Options below
   enable_images: True
   
   #Leave any field blank if not needed
-  large_image_key: java
+  large_image_key: mdown
   small_image_key: vscode
-  large_image_text: Java
+  large_image_text: Markdown
   small_image_text: Visual Studio Code

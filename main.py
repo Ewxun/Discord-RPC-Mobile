@@ -9,10 +9,12 @@ import yaml
 with open("config.yml","r") as file:
   config = yaml.full_load(file.read())
 
+
 from ext.imgid import get_img_id
 from ext.mcstat import mcstats
 if config["replit"]:
   from ext.bot_stat import keep_on
+  keep_on()
   token = os.environ.get("TOKEN")
 else:
   token = config["token"]
@@ -44,8 +46,11 @@ except TypeError:
 
 
 if config["party"]["enable_party"] in [True,"true","True"]:
-  if config["party"]["minecraft"]["enable_detection"] == True:
-    servermergip = config["party"]["minecraft"]["server_ip"] + ":" + str(config["party"]["minecraft"]["server_port"])
+  if config["party"]["minecraft"]["enable_detection"]:
+    if config["party"]["minecraft"]["server_port"] != None:
+      servermergip = config["party"]["minecraft"]["server_ip"] + ":" + str(config["party"]["minecraft"]["server_port"])
+    else:
+      servermergip = config["party"]["minecraft"]["server_ip"] + ":25565"
     partylist = mcstats(servermergip)
     #print(partylist)
     partyd = dict([
@@ -123,6 +128,4 @@ async def on_ready():
 async def on_disconnect():
   print("Rich Presence Stopped")
 
-if config["replit"]:
-  keep_on()
 bot.run(token,bot = False)
